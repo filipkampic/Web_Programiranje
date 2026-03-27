@@ -1,0 +1,278 @@
+:root {
+    --c1: #e63946;   /* Alternative Rock */
+    --c2: #457b9d;   /* Indie Rock */
+    --c3: #2a9d8f;   /* Grunge */
+    --c4: #e9c46a;   /* Britpop */
+    --c5: #f4a261;   /* Nu Metal */
+    --c6: #8338ec;   /* Classic Rock */
+    --c7: #06d6a0;   /* Progressive Rock */
+    --c8: #fb5607;   /* Garage Rock */
+
+    --bar-color: #1db954;
+    --bar-accent: #111;
+    --card-radius: 10px;
+    --card-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart kartice */ 
+.chart-card {
+    background: white;
+    margin: 20px auto;
+    padding: 24px 28px;
+    max-width: min(900px, 95%);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    text-align: left;
+}
+
+.chart-card h2 {
+    margin: 0 0 4px;
+    font-size: 1.3rem;
+    color: #111;
+}
+
+.chart-desc {
+    margin: 0 0 24px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* PIE CHART */
+.charts-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.pie-wrap {
+    flex: 0 0 auto;
+}
+
+.pie {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--c1) 0deg 148deg,
+        var(--c2) 148deg 197deg,
+        var(--c3) 197deg 230deg,
+        var(--c4) 230deg 263deg,
+        var(--c5) 263deg 296deg,
+        var(--c6) 296deg 328deg,
+        var(--c7) 328deg 345deg,
+        var(--c8) 345deg 360deg
+    );
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    animation: pie-reveal 1.2s ease-out both;
+}
+
+@keyframes pie-reveal {
+    from { transform: scale(0.5) rotate(-180deg); opacity: 0; }
+    to   { transform: scale(1)   rotate(0deg);    opacity: 1; }
+}
+
+.pie:hover {
+    box-shadow: 0 6px 28px rgba(0,0,0,0.3);
+    transform: scale(1.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Legenda  */
+.legend {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.legend li strong {
+    margin-left: auto;
+    font-size: 1rem;
+    color: #111;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* BAR CHART (desktop – vertikalni stupci) */
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    height: 240px;
+    padding: 0 8px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.bar-chart-mobile {
+    display: none;
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.bar {
+    width: 100%;
+    height: var(--h);
+    background: var(--bar-color);
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    min-height: 20px;
+    cursor: default;
+
+    animation: bar-grow 0.9s cubic-bezier(0.34, 1.3, 0.64, 1) both;
+    animation-delay: calc(var(--i, 0) * 0.1s);
+
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.bar:nth-child(1) { --i: 0; }
+.bar:nth-child(2) { --i: 1; }
+.bar:nth-child(3) { --i: 2; }
+.bar:nth-child(4) { --i: 3; }
+
+@keyframes bar-grow {
+    from { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    to   { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+}
+
+.bar:hover {
+    filter: brightness(1.15);
+    transform: scaleY(1.03);
+    transform-origin: bottom;
+}
+
+.bar--accent {
+    background: var(--bar-accent);
+}
+
+.bar--accent:hover {
+    background: #333;
+    filter: none;
+}
+
+.bar-value {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #111;
+    white-space: nowrap;
+}
+
+.bar-label {
+    font-size: 0.78rem;
+    color: #555;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* MOBILE – horizontalni barovi */
+.hbar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.hbar-label {
+    font-size: 0.82rem;
+    color: #555;
+    width: 80px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.hbar {
+    height: 28px;
+    width: var(--w);
+    background: var(--bar-color);
+    border-radius: 0 6px 6px 0;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    min-width: 28px;
+
+    animation: hbar-grow 0.9s cubic-bezier(0.34, 1.3, 0.64, 1) both;
+}
+
+.hbar--accent {
+    background: var(--bar-accent);
+}
+
+@keyframes hbar-grow {
+    from { transform: scaleX(0); transform-origin: left; opacity: 0; }
+    to   { transform: scaleX(1); transform-origin: left; opacity: 1; }
+}
+
+/* RESPONZIVNOST */
+@media (max-width: 768px) {
+    .pie {
+        width: 160px;
+        height: 160px;
+    }
+
+    .charts-flex {
+        gap: 24px;
+    }
+
+    .bar-chart {
+        display: none;
+    }
+
+    .bar-chart-mobile {
+        display: block;
+    }
+
+    .chart-card {
+        padding: 18px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pie {
+        width: 130px;
+        height: 130px;
+    }
+
+    .legend li {
+        font-size: 0.85rem;
+    }
+
+    .hbar-label {
+        width: 70px;
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,327 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Header and navigation */
+header {
+    background: #111;
+    color: white;
+    padding: 20px;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #111;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    color: #1db954;
+}
+
+/* Table */
+.table-image {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    max-width: 95%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+.left-col {
+    flex: 0 0 55%;
+    
+}
+
+.right-col {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.right-col img {
+    width: 100%;
+    height: auto;
+    min-height: 2 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 14px;
+}
+
+.table-wrapper {
+    overflow-x: hidden;
+    margin: 0;
+    width: 100%;
+}
+
+th, td {
+    padding: 3px 4px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #111;
+    color: white;
+}
+
+audio {
+    width: 120px;
+    height: 30px;
+}
+
+tr {
+    transition: background-color 0.15s ease;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Section, article, aside*/
+.concert-image-aside {
+    flex: 1;
+    width: 100%;
+}
+
+.concert-image-aside img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+section, article, aside {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: min(900px, 95%);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+aside img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+
+/* Sekcije */
+.content {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox za podatke */
+.data-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Kružni grafikon - CSS samo */
+.pie-chart {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #3498db 0% 40%,  /* Industrija */
+        #2ecc71 40% 75%,  /* Kućanstva */
+        #f1c40f 75% 100%  /* Transport */
+    );
+    margin: 0 auto;
+}
+
+/* Flexbox analiza sekcija */
+.analysis-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap; /* wrap */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.analysis-box {
+    background: #e3e3e3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+/* Flexbox za kontakt formu */
+.form-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+input, button {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background: #111;
+    color: white;
+}
+
+footer a {
+    color: #1db954;
+    text-decoration: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        color: white;
+        padding: 15px 20px;
+        background: #111;
+        text-align: left;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #nav-toggle:checked + .nav-menu {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    th, td {
+        font-size: 11px;
+        padding: 4px;
+    }
+
+    .table-wrapper{
+        max-width: 95%;
+    }
+
+    .concert-image-aside {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .table-image {
+        flex-direction: column;
+    }
+
+    .right-col {
+        flex: 1 1 100%;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .left-col {
+        flex: 1 1 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left-col .table-wrapper {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    aside {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    aside ul {
+        flex: 1;
+    }
+
+    aside picture {
+        flex: 1;
+    }
+}

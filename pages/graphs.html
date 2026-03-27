@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rock music genre and decade statistics visualized with CSS charts.">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/graphs.css">
+    <title>Graphs – Rock Music</title>
+</head>
+
+<body>
+    <header>
+        <h1>Graphs</h1>
+
+        <label for="nav-toggle" class="hamburger" aria-label="Open navigation">☰</label>
+        <input type="checkbox" id="nav-toggle" hidden>
+
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="graphs.html">Graphs</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="chart-card" aria-labelledby="pie-title">
+            <h2 id="pie-title">Songs by Genre</h2>
+            <p class="chart-desc">Distribution of the 22 songs across rock subgenres.</p>
+
+            <div class="charts-flex">
+                <div class="pie-wrap" role="img" aria-label="Pie chart showing genre distribution">
+                    <div class="pie" id="genre-pie"></div>
+                </div>
+
+                <ul class="legend" aria-label="Genre legend">
+                    <li><span class="dot" style="background: var(--c1)"></span> Alternative Rock <strong>9</strong></li>
+                    <li><span class="dot" style="background: var(--c2)"></span> Indie Rock <strong>3</strong></li>
+                    <li><span class="dot" style="background: var(--c3)"></span> Grunge <strong>2</strong></li>
+                    <li><span class="dot" style="background: var(--c4)"></span> Britpop <strong>2</strong></li>
+                    <li><span class="dot" style="background: var(--c5)"></span> Nu Metal <strong>2</strong></li>
+                    <li><span class="dot" style="background: var(--c6)"></span> Classic Rock <strong>2</strong></li>
+                    <li><span class="dot" style="background: var(--c7)"></span> Progressive Rock <strong>1</strong></li>
+                    <li><span class="dot" style="background: var(--c8)"></span> Garage Rock <strong>1</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="bar-title">
+            <h2 id="bar-title">Songs by Decade</h2>
+            <p class="chart-desc">How many songs in the list come from each decade.</p>
+
+            <div class="bar-chart" role="img" aria-label="Bar chart showing songs per decade">
+                <div class="bar-group">
+                    <div class="bar" style="--h: 9%" aria-label="1960s: 1 song">
+                        <span class="bar-value">1</span>
+                    </div>
+                    <span class="bar-label">60s</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="--h: 9%" aria-label="1970s: 1 song">
+                        <span class="bar-value">1</span>
+                    </div>
+                    <span class="bar-label">70s</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="--h: 55%" aria-label="1990s: 8 songs">
+                        <span class="bar-value">8</span>
+                    </div>
+                    <span class="bar-label">90s</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="--h: 90%" aria-label="2000s: 12 songs">
+                        <span class="bar-value">12</span>
+                    </div>
+                    <span class="bar-label">00s</span>
+                </div>
+            </div>
+
+            <div class="bar-chart-mobile" aria-hidden="true">
+                <div class="hbar-row">
+                    <span class="hbar-label">60s</span>
+                    <div class="hbar" style="--w: 8%"><span>1</span></div>
+                </div>
+                <div class="hbar-row">
+                    <span class="hbar-label">70s</span>
+                    <div class="hbar" style="--w: 8%"><span>1</span></div>
+                </div>
+                <div class="hbar-row">
+                    <span class="hbar-label">90s</span>
+                    <div class="hbar" style="--w: 55%"><span>8</span></div>
+                </div>
+                <div class="hbar-row">
+                    <span class="hbar-label">00s</span>
+                    <div class="hbar" style="--w: 92%"><span>12</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-card" aria-labelledby="artist-title">
+            <h2 id="artist-title">Songs per Artist</h2>
+            <p class="chart-desc">Number of songs each artist has in the playlist.</p>
+
+            <div class="bar-chart" role="img" aria-label="Bar chart showing songs per artist">
+                <div class="bar-group">
+                    <div class="bar bar--accent" style="--h: 100%" aria-label="Radiohead: 4 songs">
+                        <span class="bar-value">4</span>
+                    </div>
+                    <span class="bar-label">Radiohead</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar bar--accent" style="--h: 50%" aria-label="Nirvana: 2 songs">
+                        <span class="bar-value">2</span>
+                    </div>
+                    <span class="bar-label">Nirvana</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar bar--accent" style="--h: 50%" aria-label="Foo Fighters: 2 songs">
+                        <span class="bar-value">2</span>
+                    </div>
+                    <span class="bar-label">Foo Fighters</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar bar--accent" style="--h: 50%" aria-label="Linkin Park: 2 songs">
+                        <span class="bar-value">2</span>
+                    </div>
+                    <span class="bar-label">Linkin Park</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar bar--accent" style="--h: 50%" aria-label="Muse: 2 songs">
+                        <span class="bar-value">2</span>
+                    </div>
+                    <span class="bar-label">Muse</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar bar--accent" style="--h: 50%" aria-label="Red Hot Chili Peppers: 2 songs">
+                        <span class="bar-value">2</span>
+                    </div>
+                    <span class="bar-label">Red Hot Chili Peppers</span>
+                </div>
+                <div class="bar-group">
+                    <div class="bar bar--accent" style="--h: 25%" aria-label="The Rolling Stones: 1 song">
+                        <span class="bar-value">1</span>
+                    </div>
+                    <span class="bar-label">The Rolling Stones</span>
+                </div>
+            </div>
+
+            <div class="bar-chart-mobile" aria-hidden="true">
+                <div class="hbar-row">
+                    <span class="hbar-label">Radiohead</span>
+                    <div class="hbar hbar--accent" style="--w: 100%"><span>4</span></div>
+                </div>
+                <div class="hbar-row">
+                    <span class="hbar-label">Nirvana</span>
+                    <div class="hbar hbar--accent" style="--w: 50%"><span>2</span></div>
+                </div>
+                <div class="hbar-row">
+                    <span class="hbar-label">Foo Fighters</span>
+                    <div class="hbar hbar--accent" style="--w: 50%"><span>2</span></div>
+                </div>
+                <div class="hbar-row">
+                    <span class="hbar-label">Linkin Park</span>
+                    <div class="hbar hbar--accent" style="--w: 50%"><span>2</span></div>
+                </div>
+                <div class="hbar-row">
+                    <span class="hbar-label">Muse</span>
+                    <div class="hbar hbar--accent" style="--w: 50%"><span>2</span></div>
+                </div>
+                <div class="hbar-row">
+                    <span class="hbar-label">Red Hot Chili Peppers</span>
+                    <div class="hbar hbar--accent" style="--w: 50%"><span>2</span></div>
+                </div>
+                <div class="hbar-row">
+                    <span class="hbar-label">The Rolling Stones</span>
+                    <div class="hbar hbar--accent" style="--w: 25%"><span>1</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rock Music List. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

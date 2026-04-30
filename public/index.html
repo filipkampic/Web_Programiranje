@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Responsive web page about music.">
+	<link rel="stylesheet" href="styles/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+	<title>Rock Music</title>
+</head>
+
+<body>
+	<header>
+		<h1>Rock Music list</h1>
+
+		<label for="nav-toggle" class="hamburger" aria-label="Open navigation">☰</label>
+		<input type="checkbox" id="nav-toggle" hidden>
+
+		<ul class="nav-menu">
+			<li><a href="/">Home</a></li>
+			<li><a href="/graphs">Graphs</a></li>
+			<li><a href="/gallery">Gallery</a></li>
+		</ul>
+	</header>
+
+	<main>
+		<div class="table-image">
+			<div class="left-col">
+
+				<div class="filters-bar">
+					<div class="filter-controls">
+						<label for="filter-genre">Genre:</label>
+						<select id="filter-genre">
+							<option value="">-- All Genres --</option>
+							<option value="Rock">Rock</option>
+							<option value="Hard Rock">Hard Rock</option>
+							<option value="Grunge">Grunge</option>
+							<option value="Alternative Rock">Alternative Rock</option>
+							<option value="Indie Rock">Indie Rock</option>
+							<option value="Heavy Metal">Heavy Metal</option>
+							<option value="Thrash Metal">Thrash Metal</option>
+							<option value="Alternative Metal">Alternative Metal</option>
+							<option value="Nu Metal">Nu Metal</option>
+							<option value="Punk Rock">Punk Rock</option>
+							<option value="Soft Rock">Soft Rock</option>
+							<option value="Funk Rock">Funk Rock</option>
+							<option value="Garage Rock">Garage Rock</option>
+						</select>
+
+						<label for="filter-artist">Artist:</label>
+						<input type="text" id="filter-artist" placeholder="e.g. Nirvana">
+
+						<div class="bpm-group">
+							<label for="filter-bpm">Min BPM: <span id="bpm-value">60</span></label>
+							<input type="range" id="filter-bpm" min="60" max="220" step="1" value="60">
+						</div>
+
+						<div class="button-group">
+							<button id="btn-filter">Apply</button>
+							<button id="btn-reset">Reset</button>
+						</div>
+
+						<fieldset class="filter-mood">
+							<legend>Mood:</legend>
+							<label><input type="radio" name="mood" value="" checked> All</label>
+							<label><input type="radio" name="mood" value="Energetic"> Energetic</label>
+							<label><input type="radio" name="mood" value="Melancholic"> Melancholic</label>
+							<label><input type="radio" name="mood" value="Aggressive"> Aggressive</label>
+							<label><input type="radio" name="mood" value="Emotional"> Emotional</label>
+							<label><input type="radio" name="mood" value="Dramatic"> Dramatic</label>
+							<label><input type="radio" name="mood" value="Rebellious"> Rebellious</label>
+							<label><input type="radio" name="mood" value="Nostalgic"> Nostalgic</label>
+							<label><input type="radio" name="mood" value="Dark"> Dark</label>
+							<label><input type="radio" name="mood" value="Sad"> Sad</label>
+						</fieldset>
+					</div>
+				</div>
+
+				<div class="table-wrapper">
+					<table id="music-table" aria-label="Songs table">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Artist</th>
+								<th>Genre</th>
+								<th>BPM</th>
+								<th>Year</th>
+								<th>Popularity</th>
+								<th>Mood</th>
+								<th>Add</th>
+							</tr>
+						</thead>
+						<tbody>	
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="right-col">
+				<p class="gallery-title">Image Gallery</p>	
+				<div class="concert-image-aside">
+					<img src="img/rock-concert-1.jpg" alt="Guitarist performing on stage in front of a crowd" loading="lazy">
+				</div>
+				<div class="concert-image-aside">
+					<img src="img/rock-concert-2.jpg" alt="Silhouette of a guitarist on stage with dramatic lighting" loading="lazy">
+				</div>
+				<div class="concert-image-aside">
+					<img src="img/rock-concert-3.jpg" alt="Rock concert crowd with raised hands and stage lights" loading="lazy">
+				</div>
+				<div class="concert-image-aside">
+					<img src="img/rock-concert-4.jpg" alt="Crowd at a rock concert showing horns hand sign" loading="lazy">
+				</div>
+			</div>
+		</div>
+
+		<aside id="playlist-panel" aria-label="My playlist">
+			<div class="playlist-header">
+				<h3>My Playlist <span id="playlist-count">(0)</span></h3>
+				<button id="btn-toggle-playlist" aria-label="Toggle playlist">▼</button>
+			</div>
+			<div id="playlist-body">
+				<ul id="playlist-list"></ul>
+				<p id="playlist-empty">No songs added yet.</p>
+				<button id="btn-confirm-playlist">✔ Confirm playlist</button>
+			</div>
+		</aside>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Rock Music List. All rights reserved.</p>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

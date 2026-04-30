@@ -4,7 +4,7 @@ Rock Music webpage.
 
 ## 🔗 Railway link
 <!-- Ovdje postavi link nakon deploya na Railway -->
-**Live:** https://wplv2test-production.up.railway.app/
+**Live:** https://wplvtest-production.up.railway.app/
 
 ---
 

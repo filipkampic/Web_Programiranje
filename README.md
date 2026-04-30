@@ -1,9 +1,8 @@
-# Rock Music – LV2 Node.js & Express
+# Rock Music
 
 Rock Music webpage.
 
 ## 🔗 Railway link
-<!-- Ovdje postavi link nakon deploya na Railway -->
 **Live:** https://wplvtest-production.up.railway.app/
 
 ---

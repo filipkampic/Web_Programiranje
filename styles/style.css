@@ -333,16 +333,15 @@ tr:hover {
      right: 20px;
     bottom: 20px;
     width: 280px;
-    background: #1a1a1a;
+    background: #1a1a1a !important;
     color: white;
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.45);
     z-index: 1000;
-    padding: 0;
-    margin: 0;
-    max-width: none;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
     text-align: left;
-    display: block;
 }
 
 .playlist-header {
@@ -429,8 +428,67 @@ tr:hover {
     background: #17a044; 
 }
 
-/* Section, article, aside*/
-section, article, aside {
+#btn-view-collection {
+    display: block;
+    text-align: center;
+    background: #1db954;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+#btn-view-collection:hover { background: #17a044; }
+#btn-view-collection:visited { color: white; }
+
+.playlist-selector select {
+    flex: 1;
+    background: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 4px 6px;
+    font-size: 13px;
+}
+
+.playlist-selector select option {
+    background: #2a2a2a;
+    color: white;
+}
+
+#btn-new-playlist {
+    background: #1db954;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+#btn-new-playlist:hover { background: #17a044; }
+
+#btn-delete-playlist {
+    background: none;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: #e74c3c;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+#btn-delete-playlist:hover {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+/* Section, article */
+section, article {
     background: white;
     margin: 20px auto;
     padding: 20px;

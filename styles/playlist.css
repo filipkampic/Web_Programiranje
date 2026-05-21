@@ -1,0 +1,180 @@
+.chart-card {
+    background: white;
+    margin: 20px auto;
+    padding: 24px 28px;
+    max-width: min(960px, 95%);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.chart-card h2 {
+    margin: 0 0 4px;
+    font-size: 1.3rem;
+    color: #111;
+}
+
+.chart-desc {
+    margin: 0 0 16px;
+    color: #555;
+    font-size: 0.95rem;
+}
+.chart-desc a {
+    color: #1db954;
+    font-weight: bold;
+    text-decoration: none;
+}
+.chart-desc a:hover { text-decoration: underline; }
+
+.playlist-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+.playlist-tab {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #eee;
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+.playlist-tab.active {
+    background: #1a1a1a;
+    color: #1db954;
+}
+
+/* Genre badgevi */
+.genre-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 8px;
+    align-items: flex-start;
+}
+
+.genre-badge {
+    background: #1a1a1a;
+    color: #1db954;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Širina tablice */
+#playlist-table th:first-child,
+#playlist-table td:first-child {
+    width: 30px;
+    min-width: 30px;
+}
+
+#playlist-table th:nth-child(2),
+#playlist-table td:nth-child(2) {
+    width: auto;
+}
+
+#playlist-table th:nth-child(5),
+#playlist-table td:nth-child(5),
+#playlist-table th:nth-child(6),
+#playlist-table td:nth-child(6) {
+    width: 45px;
+    min-width: 45px;
+}
+
+#playlist-table thead th {
+    text-align: center;
+}
+
+#playlist-table th:last-child,
+#playlist-table td:last-child {
+    width: 55px;
+    min-width: 55px;
+}
+
+/* Redovi s niskom popularnosti */
+.row-low-pop td {
+    background: #fff9f0;
+}
+
+.low-pop-badge {
+    color: #f59e0b;
+    margin-left: 3px;
+    font-size: 13px;
+}
+
+.col-date {
+    white-space: nowrap;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Gumb za uklanjanje iz playliste*/
+.btn-remove-col {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+.btn-remove-col:hover {
+    background: #fee2e2;
+}
+
+/* Gumb "u kolekciji" */
+.btn-add--in {
+    background: #17a044 !important;
+}
+.btn-add--in:hover {
+    background: #e74c3c !important;
+}
+
+/* Gumb "dodaj" za neprijavljene */
+.btn-add--login {
+    background: #888 !important;
+    cursor: default !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: white;
+    font-size: 13px;
+}
+
+/* Playlist panel - link za pregled kolekcije */
+#btn-view-collection {
+    display: block;
+    text-align: center;
+    background: #1db954;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+#btn-view-collection:hover { background: #17a044; }
+
+/* Reset link koji izgleda kao gumb */
+.btn-reset-link {
+    display: inline-block;
+    background: #aaa;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 5px;
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 1.5;
+    cursor: pointer;
+}
+.btn-reset-link:hover { background: #888; color: white; }

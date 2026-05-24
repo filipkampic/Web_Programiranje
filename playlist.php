@@ -31,7 +31,7 @@ foreach ($playlists as $pl) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['remove_id'])) {
     $removeId = (int)$_POST['remove_id'];
     $del = $conn->prepare('DELETE FROM kolekcija WHERE user_id = ? AND song_id = ? AND playlist_id = ?');
-    $del->bind_param('ii', $user['id'], $removeId, $activePlaylistId);
+    $del->bind_param('iii', $user['id'], $removeId, $activePlaylistId);
     $del->execute();
     header('Location: /playlist.php?playlist_id=' . $activePlaylistId);
     exit;

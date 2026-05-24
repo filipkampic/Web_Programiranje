@@ -51,28 +51,34 @@ figcaption {
 }
 
 /* Lightbox */
-.lightbox {
+#lightbox {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0,0,0,0.88);
     justify-content: center;
     align-items: center;
     z-index: 999;
 }
-
-.lightbox img {
+#lightbox.active { display: flex; }
+#lightbox img {
     max-width: 90vw;
-    max-height: 80vh;
-    width: auto;
-    height: auto;
+    max-height: 85vh;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 8px;
 }
-
-.lightbox:target {
-    display: flex;
+#lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
 }
+#lightbox-close:hover { color: #1db954; }
 
 /* Close button */
 .close {
@@ -89,6 +95,109 @@ figcaption {
 
 .close:hover {
     color: #1db954;
+}
+
+/* Upload kartica */
+.upload-card {
+    background: white;
+    margin: 20px auto;
+    padding: 20px 28px;
+    max-width: min(1200px, 90%);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.upload-card h2 {
+    margin: 0 0 12px;
+    font-size: 1.3rem;
+    color: #111;
+}
+
+.upload-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.upload-form input[type="file"] {
+    font-size: 13px;
+}
+
+.upload-form input[type="text"] {
+    flex: 1;
+    min-width: 180px;
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+#btn-upload {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 7px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#btn-upload:hover { background: #1db954; }
+
+#upload-msg {
+    margin: 8px 0 0;
+    font-size: 13px;
+    color: #555;
+}
+
+/* Zvjezdice */
+.rating-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 4px 2px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 22px;
+    color: #ccc;
+    transition: color 0.15s;
+    line-height: 1;
+}
+
+.star.active,
+.star.hover {
+    color: #f59e0b;
+}
+
+.avg-wrap {
+    font-size: 13px;
+    color: #555;
+}
+
+.avg-val {
+    font-weight: bold;
+    color: #111;
+}
+
+.rating-login {
+    font-size: 12px;
+    color: #888;
+    margin: 2px 0 0;
+}
+
+.rating-login a {
+    color: #1db954;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 @media (max-width: 1024px) {

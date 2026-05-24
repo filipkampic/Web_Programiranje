@@ -1,21 +1,10 @@
-# Rock Music
+# Rock Music – LV4 PHP & MySQL
 
-Rock Music webpage.
+Rock Music webpage with playlist management and image gallery with ratings.
 
-## 🔗 Railway link
-**Live:** [https://wplv-production.up.railway.app/](https://webprogramiranje-production-6263.up.railway.app/)
+## 🚀 Run locally (XAMPP)
 
----
-
-## 🚀 Run locally
-
-```bash
-# 1. Install dependencies
-npm install
-
-# 2. Run server
-npm start
-
-# 3. Open in browser
-# http://localhost:3000
-```
+1. Start Apache and MySQL in XAMPP Control Panel
+2. Place project in `htdocs/LV4/`
+3. Import `rock_music.sql` into phpMyAdmin
+4. Open in browser: `http://localhost/LV4/`

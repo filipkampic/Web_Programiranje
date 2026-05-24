@@ -1,6 +1,0 @@
-Options -Indexes
-DirectoryIndex index.php
-RewriteEngine On
-RewriteBase /lv4/
-
-RewriteRule ^graphs/?$ pages/graphs.php [L]

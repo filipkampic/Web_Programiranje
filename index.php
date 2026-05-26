@@ -149,7 +149,7 @@ if ($loggedIn) {
 
     $activeIsDefault = false;
     foreach ($playlists as $pl) {
-        if ($pl['id'] === $activePlaylistId && ((int)($pl['id_default'] ?? 0) === 1)) {
+        if ($pl['id'] === $activePlaylistId && ((int)($pl['is_default'] ?? 0) === 1)) {
             $activeIsDefault = true;
             break;
         }
